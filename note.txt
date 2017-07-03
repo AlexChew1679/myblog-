@@ -48,6 +48,29 @@ gem 'activeadmin', github: 'activeadmin'    => follow the instruction https://ac
 
 install gem 'active_skin'  => https://github.com/rstgroup/active_skin
 
+rails g active_admin:install
+rails db:migrate
+rails db:seed   <= to create a mock user... admin@example.com
+
+rails g active_admin:resource User
+rails g active_admin:resource Post
+
+gem 'active_skin'
+
+go to assets/stylesheets at active_admin.scss
+
+
+              @import "active_admin/mixins";
+              @import "active_admin/base";
+
+              $skinLogo: none;
+
+              @import "active_skin";
+
+              
+
+
+
 
 install paperclip  gem 'paperclip'   bundle install
 rails g paperclip post image
