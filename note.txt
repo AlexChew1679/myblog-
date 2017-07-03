@@ -1,0 +1,53 @@
+rails new portfolio
+rails g controller posts
+rails g model Post title:string body:text
+
+https://startbootstrap.com/template-overviews/freelancer/
+https://www.bootstrapcdn.com/fontawesome/
+
+<!--bootsrap  -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--font awesome  -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+paste 2 source above at application.html.erb inside the head
+
+
+download the file, create
+
+at posts/views/ create
+index.html.erb
+show.html.erb
+
+create shared folder and create
+
+_header and _footer .html.erb
+
+all the source code is from bootstrap as per the website above..
+not sure go to youtube.  : https://www.youtube.com/watch?v=i2x995hm8r8
+
+install devise gem
+rails g devise:install
+rails g devise User
+
+follow the instruction after rails g devise:install
+
+create a _alert.html.erb at views/shared folder
+          copy                <p class="notice"><%= notice %></p>
+                              <p class="alert"><%= alert %></p>
+
+                              n paste it
+    render 'shared/alert' at application.html.erb
+
+
+
+install
+gem 'activeadmin', github: 'activeadmin'    => follow the instruction https://activeadmin.info/documentation.html
+
+install gem 'active_skin'  => https://github.com/rstgroup/active_skin
+
+
+install paperclip  gem 'paperclip'   bundle install
+rails g paperclip post image
